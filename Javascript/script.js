@@ -44,7 +44,7 @@ var swiper = new Swiper(".slide_content", {
     slidesPerView: 3,
     spaceBetween: 52,
     loop: true,
-    centerSlide: 'true',
+    // centerSlide: 'true',
     fade: 'true',
     grabCursor: 'true',
     loopFillGroupWithBlank: true,
@@ -70,3 +70,19 @@ var swiper = new Swiper(".slide_content", {
     }
 });
     
+
+
+
+// For second slider/carousel(menu section)
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    grid: {
+        rows: 2,
+        columns: 3
+    },
+    spaceBetween: 30,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
