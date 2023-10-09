@@ -1887,9 +1887,9 @@ footer .footer_inner {
 
 .footer_main .flour_and_frost h2 {
     color: var(--color_main);
-    font-family: var(--main_font);
-    font-size: 1.3em;
-    padding-top: .3em;
+    font-family: var(--heading_font);
+    font-size: 1.8em;
+    padding-top: .1em;
 }
 
 
@@ -1934,25 +1934,26 @@ footer .footer_inner {
 
 
 
+.newsletter form input[type="text"] {
+    border: none;
+    border-radius: 25px;
+    width: 110%;
+    height: 15.5%;
+    outline: none;
+    z-index: 10;
+}
+
+
+
 .newsletter form input[type="email"] {
     border: none;
-    border-radius: 15px;
+    border-radius: 25px;
     width: 110%;
     height: 15%;
     outline: none;
     z-index: 10;
 }
 
-
-
-.newsletter form input[type="text"] {
-    border: none;
-    border-radius: 15px;
-    width: 110%;
-    height: 15.5%;
-    outline: none;
-    z-index: 10;
-}
 
 
 .newsletter form .fa-user {
@@ -2070,7 +2071,8 @@ footer .footer_inner {
 
 
 .footer_bottom .container span a {
-    font-family: var(--main_font);
+    font-family: var(--secondary_font);
+    font-size: 1em;
     font-weight: 800;
     color: var(--color_main);
 }
