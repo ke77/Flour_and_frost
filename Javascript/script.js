@@ -76,13 +76,33 @@ var swiper = new Swiper(".slide_content", {
 // For second slider/carousel(menu section)
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 3,
+    dynamicBullets: true,
+    autoplay: {
+        delay: 3500,
+        disableOnInteraction: false
+    },
     grid: {
         rows: 2,
         columns: 3
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
     spaceBetween: 30,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
     },
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true
+    },
+    keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+    },
+    mousewheel: {
+        invert: true,
+    }
 });
