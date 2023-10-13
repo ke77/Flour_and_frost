@@ -1,19 +1,38 @@
-// //Code for hamburger menu
-// const selectElement = function(element) {
-//     return document.querySelector(element);
-// };
-// let body = selectElement('body');
+const menuToggler = document.querySelector(".fa-hamburger");
+const hamburgerMenu = document.querySelector(".hamburger_menu");
+
+console.log(menuToggler);
+console.log(hamburgerMenu);
+console.log("Hello World!");
+
+menuToggler.addEventListener("click", () => {
+    hamburgerMenu.classList.toggle("hamburger_open");
+    hamburgerMenu.style.transition = "all .4s ease";
+})
 
 
-let menuToggler = document.getElementsByClassName('fa-hamburger');
-let hamburgerMenu = document.getElementsByClassName('hamburger_menu');
-
-menuToggler.addEventListener('click', function() {
-    hamburgerMenu.classList.toggle('open');
-});
-
+window.addEventListener("scroll", () => {
+    if(window.scrollY > 85) {
+        hamburgerMenu.classList.remove("hamburger_open");
+    }
+})
 
 
+
+// For the shopping cart
+const cartToggle = document.querySelector(".fa-shopping-cart");
+const shoppingCart = document.querySelector(".cart_wrapper");
+cartToggle.addEventListener("click", () => {
+    shoppingCart.classList.add("shopping_cart_open_styling");
+})
+console.log(cartToggle);
+
+// Closing the shopping cart
+const cartClose = document.querySelector(".cart_wrapper .close_cart");
+cartClose.addEventListener("click", () => {
+    shoppingCart.classList.remove("shopping_cart_open_styling");
+    shoppingCart.classList.add("shopping_cart_close_styling");
+})
 
 
 
@@ -30,7 +49,7 @@ window.addEventListener("scroll", () => {
     else {
         scrollUp.classList.remove("scroll_up_active");
     }
-})
+});
 // document.querySelector('.subscribe').addEventListener('click', function() {
     //     const email = querySelector
     // })
@@ -48,6 +67,13 @@ var swiper = new Swiper(".slide_content", {
     fade: 'true',
     grabCursor: 'true',
     loopFillGroupWithBlank: true,
+    autoplay: {
+        delay: 3500,
+        disableOnInteraction: false
+    },
+    fadeEffect: {
+        crossFade: true
+    },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -79,7 +105,7 @@ var swiper = new Swiper(".mySwiper", {
     dynamicBullets: true,
     autoplay: {
         delay: 3500,
-        disableOnInteraction: false
+        disableOnInteraction: true
     },
     grid: {
         rows: 2,
