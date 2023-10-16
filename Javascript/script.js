@@ -1,5 +1,6 @@
 const menuToggler = document.querySelector(".fa-hamburger");
 const hamburgerMenu = document.querySelector(".hamburger_menu");
+const closeHamburger = document.querySelector(".hamburger_close");
 
 console.log(menuToggler);
 console.log(hamburgerMenu);
@@ -7,12 +8,23 @@ console.log("Hello World!");
 
 menuToggler.addEventListener("click", () => {
     hamburgerMenu.classList.toggle("hamburger_open");
+    // hamburgerMenu.classList.replace("close_hamburger");
     hamburgerMenu.style.transition = "all .4s ease";
 })
 
 
+// closeHamburger.addEventListener("click", () => {
+    
+//     if (menuToggler.addEventListener("click") = true) {
+//         hamburgerMenu.classList.remove("hamburger_open");
+//         hamburgerMenu.style.transition = "all .4s ease-in";
+//     }
+// })
+
+
+
 window.addEventListener("scroll", () => {
-    if(window.scrollY > 85) {
+    if(window.scrollY > 115) {
         hamburgerMenu.classList.remove("hamburger_open");
     }
 })
