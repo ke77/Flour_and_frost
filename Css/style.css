@@ -2284,18 +2284,26 @@ footer .footer_inner {
 /* Media Queries */
 
 /* For bigger tablets and smaller desktop screens */
-@media only screen and (min-width: 968px) and (max-width: 1138px) {
+/* @media only screen and (min-width: 968px) and (max-width: 1138px) {
     #wrapper {
         border: 5px solid red;
+    }
+} */
+
+
+/* For laptops */
+@media only screen and (max-width: 992px) {
+    #wrapper {
+        /* border: 2px solid red; */
     }
 }
 
 
 
-
-@media only screen and (min-width: 568px) and (max-width: 968px) {
+/* For tablets */
+@media only screen and (max-width: 768px) {
     #wrapper {
-        border: 5px solid yellow;
+        /* border: 5px solid yellow; */
     }
 }
 
@@ -2303,8 +2311,7 @@ footer .footer_inner {
 
 
 /* For mobile phones */
-@media only screen and (min-width: 268px) and (max-width: 568px) {
-
+@media only screen and (max-width: 566px) {
     .section_inner {
         width: 93%;
         /* border: 2px solid green; */
@@ -2388,24 +2395,24 @@ footer .footer_inner {
     }
 
 
-    .hamburger_section button {
+    .hamburger_section .hamburger {
         width: 90%;
         height: 100%;
         outline: none;
         border: none;
         background: transparent;
         padding-left: 1em;
-    }
+=    }
 
 
-    .hamburger_section button i {
+    .hamburger_section .hamburger i {
         color: #fff;
         cursor: pointer;
         font-size: 1.7em;
     }
 
 
-    .hamburger_section button i:hover {
+    .hamburger_section .hamburger i:hover {
         color: var(--color_main);
         transform: scale(1.09);
         transition: all .2s ease-in;
@@ -2429,33 +2436,33 @@ footer .footer_inner {
     }  
 
 
-    .nav_items .hamburger_section .hamburger_menu .close_hamburger {
-        position: absolute;
-        top: 0;
-        left: 0;
+    .nav_items .hamburger_section .close_hamburger {
+        /* position: absolute; */
+        /* top: 0; */
+        /* left: 0; */
         border: 2px solid red;
+        display: none;
     }
-
     
 
 
     .nav_items .hamburger_section .hamburger_menu ul {
-        border: 2px solid cyan;
         display: flex;
         flex-direction: column;
         width: 70%;
-        height: 60%;
+        height: 50%;
     }
 
     .nav_items .hamburger_section .hamburger_menu ul li a {
         font-size: 1.07em;
         margin-top: -5em;
+        letter-spacing: 1.2px;
     }
 
 
     .nav_items .hamburger_section .hamburger_menu ul li a::after {
         content: '';
-        width: 10px;
+        width: 1.8px;
         height: 1.5px;
         display: block;
         background-color: var(--light);
@@ -2488,7 +2495,7 @@ footer .footer_inner {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 2.6em;
+        gap: 3em;
     }
 
 

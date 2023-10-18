@@ -13,14 +13,6 @@ menuToggler.addEventListener("click", () => {
 })
 
 
-// closeHamburger.addEventListener("click", () => {
-    
-//     if (menuToggler.addEventListener("click") = true) {
-//         hamburgerMenu.classList.remove("hamburger_open");
-//         hamburgerMenu.style.transition = "all .4s ease-in";
-//     }
-// })
-
 
 
 window.addEventListener("scroll", () => {
@@ -28,6 +20,23 @@ window.addEventListener("scroll", () => {
         hamburgerMenu.classList.remove("hamburger_open");
     }
 })
+
+
+// Function to open the menu
+function openMenu() {
+    hamburgerMenu.classList.add('hamburger_open');
+    menuToggler.style.display = 'none';
+    closeHamburger.style.display = 'block';
+}
+
+// Function to close the menu
+function closeMenu() {
+    hamburgerMenu.classList.remove('hamburger_open');
+    menuToggler.style.display = 'block';
+    closeHamburger.style.display = 'none';
+}
+
+
 
 
 
